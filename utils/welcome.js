@@ -1,5 +1,5 @@
 const figlet = require("figlet");
-const chalk = require("chalk");
+const chalk = require("chalk").default;
 const boxen = require("boxen");
 
 function welcome(){
