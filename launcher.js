@@ -2,6 +2,9 @@ const inquirer = require("inquirer").default;
 
 const development = require("./actions/development");
 
+const systemInfo = require("./actions/systemInfo"); 
+
+
 async function start(){
 
     console.clear();
@@ -20,6 +23,7 @@ async function start(){
                 "Study",
                 "Entertainment",
                 "Open Everything",
+                "System Information",
                 "Exit"
             ]
         }
@@ -41,6 +45,10 @@ async function start(){
 
         case "Open Everything":
             development();
+            break;
+
+        case "System Information":
+            await systemInfo();
             break;
 
         default:
